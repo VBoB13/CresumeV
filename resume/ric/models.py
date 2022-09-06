@@ -34,6 +34,7 @@ class Experience(models.Model):
     job_title = models.CharField(max_length=25)
     start_date = models.DateField()
     end_date = models.DateField(null=True)
+    summary = models.TextField(max_length=1000, default='')
 
     class Meta:
         ordering = ['-end_date']
@@ -44,9 +45,9 @@ class Experience(models.Model):
 
 class Location(models.Model):
     experience = models.ForeignKey(
-        Experience, null=True, on_delete=models.CASCADE)
+        Experience, blank=True, null=True, on_delete=models.CASCADE)
     education = models.ForeignKey(
-        Education, null=True, on_delete=models.CASCADE)
+        Education, blank=True, null=True, on_delete=models.CASCADE)
     country = models.CharField(max_length=25)
     city = models.CharField(max_length=25)
 
