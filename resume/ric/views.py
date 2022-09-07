@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.template import loader
 
+from .models import Education
+
 # Create your views here.
 
 
@@ -37,7 +39,15 @@ def index(request):
 
 
 def education(request):
-    return HttpResponse("You're currently checking out Ric's education!")
+    ed_items = Education.objects.all()
+    page_title = "Richard's Education"
+    template = loader.get_template('ric/education.html')
+    context = {
+        "page_title": page_title,
+        "ed_items": ed_items,
+        "list_icon": "ric/icons/icon_education.svg"
+    }
+    return HttpResponse(template.render(context, request))
 
 
 def experiences(request):

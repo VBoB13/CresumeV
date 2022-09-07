@@ -17,7 +17,7 @@ h1.page-title {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
 }
@@ -34,12 +34,12 @@ div.menu-item {
   height: 150px;
   width: 700px;
   border-radius: 25px;
-  background-color: rgba(0, 21, 62, 50);
+  background-color: rgba(0, 21, 62, 0.5);
 }
 
 @keyframes menu_item_animation {
-  0% {background-color: rgba(0, 21, 62, 50);}
-  100% {background-color: rgba(0, 63, 186, 50);}
+  0% {background-color: rgba(0, 21, 62, 0.5);}
+  100% {background-color: rgba(0, 63, 186, 0.5);}
 }
 
 div.menu-item:hover {
@@ -85,4 +85,86 @@ h3.menu-link {
   display: inline-block;
   position: relative;
   left: 50px;
+}
+
+/* GENERAL, but not INDEX */
+
+section.item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 750px;
+}
+
+/* EDUCATION PAGE */
+
+div.ed-list-item {
+  width: 1150px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 55px;
+}
+
+div.ed-list-item:hover {
+  animation-name: menu_item_animation;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+div.ed-list-item * {
+  display: inline-block;
+}
+
+div.list-link-icon {
+  width: 110px;
+  height: 110px;
+  border: 5px solid #FF8A00;
+  background-color: #777777;
+  border-radius: 60px;
+  display: inline-block;
+}
+
+div.list-link-icon > img {
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+div.list-item-timespan {
+  position: relative;
+  left: 15px;
+  top: -75px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+div.list-item-header {
+  position: relative;
+  left: -150px;
+  top: 0px;
+}
+
+div.list-item-header > h3.list-item-title {
+  color: #FFF;
+  text-decoration: underline;
+  font-size: 32px;
+}
+
+div.list-item-header > h4.list-item-subtitle {
+  color: #FFF;
+  font-size: 24px;
+}
+
+div.ed-item-info {
+  margin-top: 5px;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  left: 1050px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+div.ed-item-info > span.ed-item-info-header {
+  color: #FFF;
 }

@@ -16,6 +16,18 @@ class Education(models.Model):
     def __str__(self):
         return "{} at {}".format(self.major, self.institution)
 
+    @property
+    def subjects_count(self):
+        return len(self.subject_set.all())
+
+    @property
+    def subjects_to_str(self):
+        subject_str = ", ".join(
+            [subject.name for subject in self.subject_set.all()])
+        if len(subject_str) > 150:
+            return subject_str[:150] + "..."
+        return subject_str
+
 
 class Subject(models.Model):
     education = models.ForeignKey(Education, on_delete=models.CASCADE)
