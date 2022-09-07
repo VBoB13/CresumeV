@@ -37,6 +37,18 @@ div.menu-item {
   background-color: rgba(0, 21, 62, 50);
 }
 
+@keyframes menu_item_animation {
+  0% {background-color: rgba(0, 21, 62, 50);}
+  100% {background-color: rgba(0, 63, 186, 50);}
+}
+
+div.menu-item:hover {
+  animation-name: menu_item_animation;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
 div.menu-item > a {
   font-family: 'Iceland';
   font-style: normal;
