@@ -1,0 +1,22 @@
+{% extends 'ric/base.html' %} {% block content %}
+<section class="ed-item-detail">
+  <div class="detail-item-icon">
+    <img src="/static/{{ list_icon }}" alt="Education Icon" />
+  </div>
+  <div class="detail-item-timespan">
+    {{ ed_item.start_date }} - {{ ed_item.end_date }}
+  </div>
+  <div class="detail-item-header">
+    <h3 class="detail-item-title">{{ ed_item.institution }}</h3>
+    <br />
+    <h4 class="detail-item-subtitle">{{ ed_item.major }}</h4>
+  </div>
+  <div class="ed-detail-info">
+    <span class="ed-detail-info-header"
+      >Subjects covered: {{ ed_item.subjects_count }}</span
+    ><br />
+    {{ ed_item.subjects_to_str }}
+  </div>
+  <hr />
+</section>
+{% endblock content %}

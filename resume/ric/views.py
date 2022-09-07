@@ -50,6 +50,18 @@ def education(request):
     return HttpResponse(template.render(context, request))
 
 
+def education_detail(request, education_id):
+    ed_item = Education.objects.get(pk=education_id)
+    page_title = "Richard's Education"
+    template = loader.get_template('ric/education_detail.html')
+    context = {
+        "ed_item": ed_item,
+        "page_title": page_title,
+        "list_icon": "ric/icons/icon_education.svg"
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def experiences(request):
     return HttpResponse("You're currently checking out Ric's experiences!")
 
