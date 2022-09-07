@@ -19,4 +19,31 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+section.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80vh;
+}
+
+div.menu-link {
+  height: 150px;
+  width: 700px;
+  background-color: rgba(0, 21, 62, 50);
+  border-radius: 25px;
+}
+
+.menu-link > a {
+  position: relative;
+  left: 200px;
+  top: 37px;
+  font-family: 'Iceland';
+  font-style: normal;
+  font-size: 72px;
+  width: 400px;
+  height: 40px;
 }
