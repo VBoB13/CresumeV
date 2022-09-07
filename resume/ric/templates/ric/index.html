@@ -1,8 +1,13 @@
 {% extends 'ric/base.html' %} {% block content %}
 <section class="main-menu">
   {% for menu_item in menu_items %}
-  <div class="menu-link">
-    <a href="{{ menu_item.link }}">{{ menu_item.name }}</a><br />
+  <div class="menu-item">
+    <a href="{{ menu_item.link }}">
+      <div class="menu-link-icon">
+        <img src="/static/{{ menu_item.icon }}" alt="{{ menu_item.name }}" />
+      </div>
+      <h3 class="menu-link">{{ menu_item.name }}</h3>
+    </a>
   </div>
   {% endfor %}
 </section>

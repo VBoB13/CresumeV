@@ -30,20 +30,47 @@ section.main-menu {
   height: 80vh;
 }
 
-div.menu-link {
+div.menu-item {
   height: 150px;
   width: 700px;
-  background-color: rgba(0, 21, 62, 50);
   border-radius: 25px;
+  background-color: rgba(0, 21, 62, 50);
 }
 
-.menu-link > a {
-  position: relative;
-  left: 200px;
-  top: 37px;
+div.menu-item > a {
   font-family: 'Iceland';
   font-style: normal;
   font-size: 72px;
-  width: 400px;
-  height: 40px;
+  width: inherit;
+  height: inherit;
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+
+div.menu-link-icon {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  width: 110px;
+  height: 110px;
+  border: 5px solid #FF8A00;
+  background-color: #777777;
+  border-radius: 60px;
+  display: inline-block;
+}
+
+div.menu-link-icon > img {
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+h3.menu-link {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-size: 72px;
+  display: inline-block;
+  position: relative;
+  left: 50px;
 }

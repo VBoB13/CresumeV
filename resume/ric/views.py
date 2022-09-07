@@ -6,10 +6,26 @@ from django.template import loader
 
 def index(request):
     menu_items = [
-        {"name": "Education", "link": "/education"},
-        {"name": "Experiences", "link": "/experiences"},
-        {"name": "Who am I?", "link": "/whoami"},
-        {"name": "Contact me", "link": "/contact"}
+        {
+            "name": "Education",
+            "link": "/education",
+            "icon": "ric/icons/icon_education.svg"
+        },
+        {
+            "name": "Experiences",
+            "link": "/experiences",
+            "icon": "ric/icons/icon_experiences.svg"
+        },
+        {
+            "name": "Who am I?",
+            "link": "/whoami",
+            "icon": "ric/icons/icon_whoami.svg"
+        },
+        {
+            "name": "Contact me",
+            "link": "/contact",
+            "icon": "ric/icons/icon_contact.svg"
+        }
     ]
     page_title = "Richard's Resume"
     template = loader.get_template('ric/index.html')
