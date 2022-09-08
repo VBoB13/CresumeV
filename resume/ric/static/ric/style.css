@@ -112,7 +112,7 @@ div.list-item {
 div.list-item-row {
   display: grid;
   grid-template-columns: 120px 30vw 40vw;
-  grid-template-rows: 120px;
+  grid-template-rows: minmax(120px, auto);
   grid-column-gap: 10px;
   width: 80vw;
 }
@@ -149,25 +149,21 @@ div.list-item-timespan {
   font-size: 24px;
 }
 
-div.list-item-header {
-  
-}
-
-div.list-item-header > h3.list-item-title {
+div > h3.list-item-title {
   color: #FFF;
   text-decoration: underline;
   font-size: 32px;
 }
 
-div.list-item-header > h4.list-item-subtitle {
+div > h4.list-item-subtitle {
   color: #FFF;
   font-size: 24px;
 }
 
 div.ed-item-info {
   margin-top: 5px;
-  width: 300px;
-  height: 100px;
+  width: minmax(300px, 40vw);
+  height: minmax(100px, auto);
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -176,13 +172,6 @@ div.ed-item-info > span.ed-item-info-header {
 }
 
 /* EDUCATION DETAIL */
-
-section.ed-item-detail {
-  width: 1000px;
-  height: 400px;
-  background-color: rgba(0, 21, 62, 0.5);
-  border-radius: 55px;
-}
 
 div.list-item > hr {
   color: #FFF;

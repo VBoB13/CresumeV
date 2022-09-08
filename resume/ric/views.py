@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Education
+from .models import Education, Experience
 
 # Create your views here.
 
@@ -63,7 +63,15 @@ def education_detail(request, education_id):
 
 
 def experiences(request):
-    return HttpResponse("You're currently checking out Ric's experiences!")
+    exp_items = Experience.objects.all()
+    page_title = "Richard's Experiences"
+    template = loader.get_template('ric/experiences.html')
+    context = {
+        "exp_items": exp_items,
+        "page_title": page_title,
+        "list_icon": "ric/icons/icon_experiences.svg"
+    }
+    return HttpResponse(template.render(context, request))
 
 
 def contact_me(request):

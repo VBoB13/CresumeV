@@ -1,0 +1,29 @@
+{% extends 'ric/base.html' %} {% block content %}
+<section class="item-list">
+  {% for exp_item in exp_items %}
+  <a href="/experiences/{{ exp_item.pk }}">
+    <div class="list-item">
+      <div class="list-item-row">
+        <div class="list-item-row-col">
+          <div class="list-link-icon">
+            <img src="/static/{{ list_icon }}" alt="Experience Icon" />
+          </div>
+        </div>
+        <div class="list-item-row-col">
+          <div class="list-item-timespan">
+            {{ exp_item.start_date }} - {{ exp_item.end_date }}
+          </div>
+          <div>
+            <h3 class="list-item-title">{{ exp_item.organization }}</h3>
+            <h4 class="list-item-subtitle">{{ exp_item.job_title }}</h4>
+          </div>
+        </div>
+        <div class="list-item-row-col">
+          <div class="ed-item-info">{{ exp_item.summary }}</div>
+        </div>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+{% endblock content %}
