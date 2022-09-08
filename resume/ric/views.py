@@ -74,5 +74,17 @@ def experiences(request):
     return HttpResponse(template.render(context, request))
 
 
+def experiences_detail(request, experience_id):
+    exp_item = Experience.objects.get(pk=experience_id)
+    page_title = "Richard's Experiences"
+    template = loader.get_template('ric/experiences_detail.html')
+    context = {
+        "exp_item": exp_item,
+        "page_title": page_title,
+        "list_icon": "ric/icons/icon_experiences.svg"
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def contact_me(request):
     return HttpResponse("Contact me, why dontcha?")

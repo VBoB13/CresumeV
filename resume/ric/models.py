@@ -61,6 +61,10 @@ class Experience(models.Model):
     def __str__(self):
         return "{} at {}".format(self.job_title, self.organization)
 
+    @property
+    def location(self):
+        return Location.objects.get(experience=self.pk)
+
 
 class Location(models.Model):
     experience = models.ForeignKey(

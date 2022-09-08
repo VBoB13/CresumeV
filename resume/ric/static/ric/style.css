@@ -107,6 +107,13 @@ div.list-item {
   border-radius: 55px;
 }
 
+div.list-item:hover {
+  animation-name: menu_item_animation;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
 /* EDUCATION PAGE */
 
 div.list-item-row {
@@ -120,13 +127,8 @@ div.list-item-row {
 div.list-item-row-col {
   display: flex;
   flex-direction: column;
-}
-
-div.list-item-row:hover {
-  animation-name: menu_item_animation;
-  animation-duration: 0.15s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 div.list-link-icon {
@@ -152,12 +154,12 @@ div.list-item-timespan {
 div > h3.list-item-title {
   color: #FFF;
   text-decoration: underline;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 div > h4.list-item-subtitle {
   color: #FFF;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 div.ed-item-info {
@@ -183,6 +185,21 @@ div.list-item > hr {
   margin-bottom: 20px;
 }
 
+/* EXPERIENCES DETAIL */
+
+div.list-item-location-logo, div.list-item-location {
+  display: inline-block;
+}
+
+div.list-item-location-logo > img {
+  height: 50px;
+  width: 50px;
+}
+
+div.list-item-location > span {
+  font-size: 32px;
+}
+
 /* DETAIL (GENERAL) */
 
 div.detail-item-row {
@@ -196,7 +213,7 @@ div.detail-item-row {
 div.description-row {
   display: grid;
   grid-template-columns: 37vw 43vw;
-  grid-template-rows: minmax(280px, auto);
+  grid-template-rows: minmax(225px, auto);
   grid-column-gap: 25px;
   width: 80vw;
   margin-bottom: 10px;
@@ -204,4 +221,12 @@ div.description-row {
 
 div.description-row > div.comments {
   margin: 2em;
+}
+
+div.description-row-single-col {
+  display: grid;
+  grid-template-columns: 60vw;
+  grid-template-rows: minmax(225px, auto);
+  margin-bottom: 10px;
+  margin-left: 10vw;
 }
