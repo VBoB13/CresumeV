@@ -28,6 +28,13 @@ class Education(models.Model):
             return subject_str[:150] + "..."
         return subject_str
 
+    @property
+    def subjects(self):
+        subjects = self.subject_set.all()
+        if len(subjects) >= 20:
+            return subjects[:20]
+        return subjects
+
 
 class Subject(models.Model):
     education = models.ForeignKey(Education, on_delete=models.CASCADE)
