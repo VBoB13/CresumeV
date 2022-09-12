@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: minmax(100vh, auto);
 }
 
 section.main-menu {
@@ -97,7 +97,7 @@ section.item-list {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 750px;
+  height: auto;
 }
 
 section.item-list > a {
@@ -120,10 +120,20 @@ div.list-item:hover {
 
 div.list-item-row {
   display: grid;
-  grid-template-columns: 120px 30vw 40vw;
-  grid-template-rows: minmax(120px, auto);
-  grid-column-gap: 10px;
-  width: 80vw;
+  grid-template-rows: 15vh;
+  grid-auto-rows: minmax(20vh, auto);
+  grid-template-columns: 25vw 65vw;
+  grid-template-areas:
+    "logo header"
+    "content content";
+  grid-row-gap: 10px;
+  width: 90vw;
+  margin-bottom: 0.75rem;
+}
+
+div.ed-item-info-div {
+  grid-area: content;
+  margin: 0.5rem;
 }
 
 div.list-item-row-col {
@@ -134,41 +144,43 @@ div.list-item-row-col {
 }
 
 div.list-link-icon {
-  width: 110px;
-  height: 110px;
-  border: 5px solid #FF8A00;
+  width: 9vh;
+  height: 9vh;
+  border: 0.5vh solid #FF8A00;
   background-color: #777777;
-  border-radius: 60px;
+  border-radius: 5vh;
   display: inline-block;
 }
 
 div.list-link-icon > img {
   position: relative;
-  left: 10px;
-  top: 10px;
+  left: 1vh;
+  top: 1vh;
+  width: 7vh;
+  height: 7vh;
 }
 
 div.list-item-timespan {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 div > h3.list-item-title {
   color: #FFF;
   text-decoration: underline;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 div > h4.list-item-subtitle {
   color: #FFF;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
 }
 
 div.ed-item-info {
-  margin-top: 5px;
-  width: minmax(300px, 40vw);
-  height: minmax(100px, auto);
+  width: minmax(25vw, 80vw);
+  height: auto;
   color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
 }
 
 div.ed-item-info > span.ed-item-info-header {
@@ -194,35 +206,38 @@ div.list-item-location-logo, div.list-item-location {
 }
 
 div.list-item-location-logo > img {
-  height: 50px;
-  width: 50px;
+  height: 1rem;
+  width: 1rem;
 }
 
 div.list-item-location > span {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+div.comments-exp {
+  font-size: 0.9rem;
 }
 
 /* DETAIL (GENERAL) */
 
-div.detail-item-row {
-  display: grid;
-  grid-template-columns: 120px 30vw 40vw;
-  grid-template-rows: 120px;
-  grid-column-gap: 10px;
-  width: 80vw;
-}
-
 div.description-row {
   display: grid;
-  grid-template-columns: 37vw 43vw;
-  grid-template-rows: minmax(225px, auto);
-  grid-column-gap: 25px;
-  width: 80vw;
+  grid-template-rows: minmax(20vh, auto);
+  grid-row-gap: 0.5rem;
+  width: 90vw;
   margin-bottom: 10px;
 }
 
-div.description-row > div.comments {
-  margin: 2rem;
+div.description-row > * {
+  margin: 1rem;
+  font-size: 0.8rem;
+}
+
+div.description-row > ol > li {
+  position: relative;
+  left: 10vw;
+  top: -5vh;
+  font-size: 0.8rem;
 }
 
 div.description-row-single-col {

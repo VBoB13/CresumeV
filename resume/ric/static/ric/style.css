@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: auto;
 }
 
 section.main-menu {
@@ -94,9 +94,9 @@ h3.menu-link {
 section.item-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 750px;
+  height: auto;
 }
 
 section.item-list > a {
@@ -121,8 +121,9 @@ div.list-item-row {
   display: grid;
   grid-template-columns: 120px 30vw 40vw;
   grid-template-rows: minmax(120px, auto);
-  grid-column-gap: 10px;
+  grid-gap: 10px;
   width: 80vw;
+  margin-bottom: 0.5rem;
 }
 
 div.list-item-row-col {
@@ -168,6 +169,7 @@ div.ed-item-info {
   width: minmax(300px, 40vw);
   height: minmax(100px, auto);
   color: rgba(255, 255, 255, 0.5);
+  margin: 1rem;
 }
 
 div.ed-item-info > span.ed-item-info-header {
@@ -213,16 +215,26 @@ div.detail-item-row {
 
 div.description-row {
   display: grid;
-  grid-template-columns: 37vw 43vw;
-  grid-template-rows: minmax(225px, auto);
-  grid-column-gap: 25px;
-  width: 80vw;
+  grid-template-rows: minmax(20vh, auto);
+  grid-row-gap: 0.5rem;
+  width: 90vw;
   margin-bottom: 10px;
 }
 
 div.description-row > div.comments {
   margin: 2rem;
 }
+
+div.description-row > ol {
+  position: relative;
+  left: 5vw;
+}
+
+div.description-row > span {
+  position: relative;
+  left: 5vw;
+}
+
 
 div.description-row-single-col {
   display: grid;

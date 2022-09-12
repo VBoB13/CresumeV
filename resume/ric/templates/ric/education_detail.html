@@ -15,7 +15,7 @@
         <h4 class="list-item-subtitle">{{ ed_item.major }}</h4>
       </div>
     </div>
-    <div class="list-item-row-col">
+    <div class="list-item-row-col ed-item-info-div">
       <div class="ed-item-info">
         <span class="ed-item-info-header"
           >Subjects covered: {{ ed_item.subjects_count }}</span
@@ -27,13 +27,12 @@
   <hr />
   <div class="description-row">
     <div class="comments">{{ ed_item.comments }}</div>
-    <div>
-      <span class="subject-by-weight">Subjects by weight:</span>
-      <ol>
-        {% for subject in ed_item.subjects %}
-        <li>{{ subject }}</li>
-        {% endfor %}
-      </ol>
+    <span class="subject-by-weight">Subjects by weight:</span>
+    <ol>
+      {% for subject in ed_item.subjects %}
+      <li>{{ subject }}</li>
+      {% endfor %}
+    </ol>
     </div>
   </div>
 </div>
