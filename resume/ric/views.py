@@ -86,5 +86,14 @@ def experiences_detail(request, experience_id):
     return HttpResponse(template.render(context, request))
 
 
+def aboutme(request):
+    page_title = "Who am I?"
+    template = loader.get_template('ric/aboutme.html')
+    context = {
+        "page_title": page_title
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def contact_me(request):
     return HttpResponse("Contact me, why dontcha?")

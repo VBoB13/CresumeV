@@ -247,3 +247,24 @@ div.description-row-single-col {
   margin-bottom: 10px;
   margin-left: 10vw;
 }
+
+/* ABOUT ME */
+
+section.about-me {
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  width: 85vw;
+}
+
+h2.about-me-subtitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
+  text-decoration: underline;
+}
+
+div.about-me-content {
+  color:rgba(255, 255, 255, 0.80);
+}
