@@ -1,0 +1,22 @@
+{% extends 'ric/base.html' %} {% block content %}
+<section class="main-menu">
+  {% for menu_item in menu_items %}
+  <div class="menu-item">
+    {% if menu_item.name == 'Email' %}
+      <a href="mailto:{{ menu_item.link }}" target="_blank">
+    {% else %}
+      <a href="{{ menu_item.link }}" target="_blank">
+    {% endif %}
+    {% if menu_item.name == 'LinkedIn' %}
+      <div class="menu-link-icon linkedin-icon">
+    {% else %}
+        <div class="menu-link-icon">
+    {% endif %}
+        <img src="/static/{{ menu_item.icon }}" alt="{{ menu_item.name }}" />
+      </div>
+      <h3 class="menu-link">{{ menu_item.name }}</h3>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock content %}

@@ -16,5 +16,5 @@ urlpatterns = [
         views.experiences_detail, name='experience_detail'
     ),
     path('whoami/', views.aboutme, name='whoami'),
-    path('contact_me/', views.contact_me, name='contact_me')
+    path('contact/', views.contact_me, name='contact')
 ]

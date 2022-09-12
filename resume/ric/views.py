@@ -96,4 +96,27 @@ def aboutme(request):
 
 
 def contact_me(request):
-    return HttpResponse("Contact me, why dontcha?")
+    page_title = "Contact Information"
+    template = loader.get_template('ric/contact.html')
+    menu_items = [
+        {
+            "name": "Email",
+            "link": "ericsonrichard85@gmail.com",
+            "icon": "ric/icons/icon_at.svg"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/VBoB13",
+            "icon": "ric/icons/icon_github.svg"
+        },
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/richard-ericson/",
+            "icon": "ric/icons/icon_linkedin.svg"
+        }
+    ]
+    context = {
+        "page_title": page_title,
+        "menu_items": menu_items
+    }
+    return HttpResponse(template.render(context, request))

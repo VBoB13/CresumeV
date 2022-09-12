@@ -264,3 +264,9 @@ h2.about-me-subtitle {
 div.about-me-content {
   color:rgba(255, 255, 255, 0.80);
 }
+
+div.linkedin-icon > img {
+  position: relative;
+  left: 25px;
+  top: 20px;
+}
