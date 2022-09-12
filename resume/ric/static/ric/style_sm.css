@@ -107,6 +107,8 @@ section.item-list > a {
 div.list-item {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 55px;
+  padding: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 div.list-item:hover {
@@ -259,12 +261,13 @@ section.about-me {
 }
 
 h2.about-me-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   margin-top: 0.75rem;
   text-decoration: underline;
 }
 
 div.about-me-content {
+  font-size: 0.8rem;
   color:rgba(255, 255, 255, 0.80);
 }
