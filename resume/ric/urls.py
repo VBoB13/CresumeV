@@ -10,9 +10,9 @@ urlpatterns = [
         'education/<int:education_id>/',
         views.education_detail, name='education_detail'
     ),
-    path('experiences/', views.experiences, name='experiences'),
+    path('experience/', views.experiences, name='experiences'),
     path(
-        'experiences/<int:experience_id>/',
+        'experience/<int:experience_id>/',
         views.experiences_detail, name='experience_detail'
     ),
     path('whoami/', views.aboutme, name='whoami'),

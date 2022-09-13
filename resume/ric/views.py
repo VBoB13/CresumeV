@@ -14,8 +14,8 @@ def index(request):
             "icon": "ric/icons/icon_education.svg"
         },
         {
-            "name": "Experiences",
-            "link": "/experiences",
+            "name": "Experience",
+            "link": "/experience",
             "icon": "ric/icons/icon_experiences.svg"
         },
         {
@@ -64,7 +64,7 @@ def education_detail(request, education_id):
 
 def experiences(request):
     exp_items = Experience.objects.all()
-    page_title = "Richard's Experiences"
+    page_title = "Richard's Experience"
     template = loader.get_template('ric/experiences.html')
     context = {
         "exp_items": exp_items,
@@ -76,7 +76,7 @@ def experiences(request):
 
 def experiences_detail(request, experience_id):
     exp_item = Experience.objects.get(pk=experience_id)
-    page_title = "Richard's Experiences"
+    page_title = "Richard's Experience"
     template = loader.get_template('ric/experiences_detail.html')
     context = {
         "exp_item": exp_item,
