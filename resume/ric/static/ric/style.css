@@ -171,11 +171,15 @@ div.ed-item-info {
   height: minmax(100px, auto);
   color: rgba(255, 255, 255, 0.5);
   margin: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75em;
 }
 
 div.ed-item-info > span.ed-item-info-header {
   color: #FFF;
 }
+
+div.descriptio
 
 /* EDUCATION DETAIL */
 
@@ -216,24 +220,38 @@ div.detail-item-row {
 
 div.description-row {
   display: grid;
-  grid-template-rows: minmax(20vh, auto);
+  grid-template-rows: minmax(10vh, auto);
   grid-row-gap: 0.5rem;
   width: 90vw;
   margin-bottom: 10px;
 }
 
 div.description-row > div.comments {
-  margin: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 div.description-row > ol {
   position: relative;
   left: 5vw;
+  margin-bottom: 0.75rem;
+}
+
+div.description-row > ol > li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85em;
 }
 
 div.description-row > span {
   position: relative;
   left: 5vw;
+}
+
+div.description-row > * {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75em;
 }
 
 
