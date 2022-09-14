@@ -179,8 +179,6 @@ div.ed-item-info > span.ed-item-info-header {
   color: #FFF;
 }
 
-div.descriptio
-
 /* EDUCATION DETAIL */
 
 div.list-item > hr {
@@ -259,8 +257,12 @@ div.description-row-single-col {
   display: grid;
   grid-template-columns: 60vw;
   grid-template-rows: minmax(225px, auto);
-  margin-bottom: 10px;
   margin-left: 10vw;
+}
+
+div.description-row-single-col > div.comments-exp {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75em;
 }
 
 /* ABOUT ME */
